@@ -1,0 +1,51 @@
+.footer {
+    .container {
+        height: 768px;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+
+        justify-content: center;
+
+        margin: 0 auto 0 auto;
+        padding-top: 440px;
+
+        @media (max-width: $mobile-menu-breakpoint) {
+            flex-direction: column;
+            padding-top: 150px;
+        }
+    }
+
+    
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        max-width: 230px;
+        margin-right: 90px;
+    }
+
+    &__item {
+        padding-bottom: 16px;
+        display: flex;
+        flex-direction: row;
+        address{
+            display: flex;
+            flex-direction: row;
+        }
+        img{
+            padding-right: 5px;
+        }
+    }
+
+    &__img {
+        width: 140px;
+        height: 48px;
+    }
+
+	&__row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+	}
+}

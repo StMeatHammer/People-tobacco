@@ -1,0 +1,38 @@
+.banner {
+    .container {
+        display: flex;
+        flex-direction: column;
+        height: 400px;
+
+        margin: 283px 0 0 262px;
+        margin-left: auto;
+        margin-right: auto;
+        
+        @media (max-width: $mobile-menu-breakpoint) {
+            margin-left: 0px;
+        }
+    }
+
+    &__img{
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        opacity: 0.2;
+        img{
+            object-fit: cover;
+        }
+    }
+
+    .main {
+        &__title {
+            margin-bottom: 10px;
+            max-width: 500px;
+        }
+
+        &__desc {
+            margin-bottom: 20px;
+            max-width: 500px;
+        }
+    }
+}

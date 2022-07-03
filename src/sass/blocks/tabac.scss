@@ -1,0 +1,138 @@
+.tabac {
+    
+    .container {
+        display: flex;
+        flex-direction: column;
+        @media (max-width: $maxTablet){
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        margin: 100px auto 0 auto;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        @media (max-width: 700px){
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &__item {
+        margin: 50px 0px 0px 0px;
+        max-width: 300px;
+        max-height: 410px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        
+        &_img1 {
+            position: absolute;
+            z-index: -1;
+            left: 20px;
+            top: 5px;
+        }
+        &_img2 {
+            position: absolute;
+            z-index: -1;
+            top: 153px;
+            right: 0px;
+            visibility: hidden;
+        }
+        
+        &:hover{
+            .tabac__item_img1{
+                left: 20px;
+                top: 5px;
+                animation: move_and_tilt_left 0.5s ease 0s normal forwards;
+            }
+            .tabac__item_img2{
+                transform: matrix(0.98, 0.19, -0.2, 0.98, 0, 0);
+                top: 50px;
+                right: -46px;
+                visibility: visible;
+                transition: visibility 1s;
+                animation: move_and_apperance_and_tilt_left 0.5s ease 0s normal forwards;
+            }
+        }
+        @media (max-width: $mobile-menu-breakpoint) {
+            margin-right: 0px;
+        }
+    }
+
+    &__btn{
+        width: 192px;
+        height: 49px;
+
+        margin: 50px auto 0 auto;
+    }
+
+    &__rect {
+        width: 300px;
+        height: 200px;
+        background: $buttonGradien;
+        backdrop-filter: blur(19px);
+
+        margin-top: 211px;
+        padding: 20px;
+
+        border-radius: 20px;
+        border: 2px solid #0085FF;
+    }
+
+    .rect {
+
+        &__title {
+            font-family: $fontGothic;
+
+            font-style: normal;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 39px;
+
+            color: $white;
+            
+            display: flex;
+            justify-content: flex-start;
+            @media (max-width: $maxMobile) {
+                font-size: 24px;
+            }
+        }
+
+        &__desc {
+            font-size: 14px;
+            line-height: 17px;
+        }
+
+        &__stronger {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 60px;
+            &_text {
+            }
+        }
+
+        &__img {
+        }
+    }
+
+    .main {
+        &__title {
+            &__title{
+                @media (max-width: 1440px) {
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+
+        &__desc {
+        }
+    }
+}
